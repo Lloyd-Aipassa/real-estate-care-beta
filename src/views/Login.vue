@@ -93,7 +93,7 @@ export default {
     methods: {
         async login() {
             let result = await axios.get(
-                `http://localhost:3000/users?eMail=${this.eMail}&Password=${this.Password}`
+                `https://my-json-server.typicode.com/Lloyd-Aipassa/Database2/uSers?eMail=${this.eMail}&Password=${this.Password}`
             )
 
             if (this.eMail === '') {
@@ -117,7 +117,7 @@ export default {
 
         async login2() {
             let result = await axios.get(
-                `http://localhost:3000/users?mobNumber=${this.mobNumber}`
+                `https://my-json-server.typicode.com/Lloyd-Aipassa/Database2/uSers?mobNumber=${this.mobNumber}`
             )
 
             if (this.mobNumber === '') {
