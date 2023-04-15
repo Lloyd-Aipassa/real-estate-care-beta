@@ -1,3 +1,4 @@
+<template></template>
 <script>
 export default {
     created() {
@@ -8,16 +9,15 @@ export default {
     methods: {
         getLocalstorage: function () {
             const getLocal = localStorage.getItem("theme")
-            console.log(getLocal);
 
             if (getLocal === "false") {
                 this.isDarkmode = false
-                console.log(this.isDarkmode);
+              
                 document.documentElement.className = false
             }
             if (getLocal === "true") {
                 this.isDarkmode = true
-                console.log(this.isDarkmode);
+            
                 document.documentElement.className = true
             }
         }

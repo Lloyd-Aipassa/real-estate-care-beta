@@ -12,16 +12,22 @@ export default createStore({
   },
 
   //aanroepen functies
-  //aanroepen functies
+  // actions: {
+  //   async fetchSchades({ commit }) {
+  //       const response = await axios.get('https://kind-tan-goshawk-tux.cyclic.app/schade?_sort=Datum&_order=asc')
+  //       commit('setSchades', response.data)
+  //   },
+
   actions: {
     async fetchSchades({ commit }) {
-        const response = await axios.get('https://kind-tan-goshawk-tux.cyclic.app/schade?_sort=Datum&_order=asc')
-        commit('setSchades', response.data)
+      const response = await axios.get('https://kind-tan-goshawk-tux.cyclic.app/schade')
+      const sortedData = response.data.sort((d1, d2) => (d1.Datum > d2.Datum) ? 1 : (d1.Datum < d2.Datum) ? -1 : 0)
+      commit('setSchades', sortedData)
     },
+  
 
     async addSchadeOpnemen ({ commit }, newSchade ) {
         const response = await axios.post('https://kind-tan-goshawk-tux.cyclic.app/schade', {...newSchade})
-
         commit('newSchadeOpnemen', response.data)
     },
     

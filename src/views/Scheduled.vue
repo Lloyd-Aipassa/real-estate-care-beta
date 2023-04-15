@@ -1,4 +1,4 @@
-<template :key="reload">
+<template >
   <main class="theme">
     <h1 class="title" style="text-align:center">Scheduled inspections</h1>
     <v-divider class="mb-5"></v-divider>
@@ -6,8 +6,10 @@
       <div class="content">
         <span>
           <h2>{{ Datum }},<br>{{ Locatie }},&nbsp;&nbsp{{ Adress }}<br>scheduled for: {{ typeOfInspection }}
+            <!-- <h2>{{ Datum.sort((a, b)=> b - a) }},<br>{{ Locatie }},&nbsp;&nbsp{{ Adress }}<br>scheduled for: {{ typeOfInspection }} -->
           </h2>
-          <v-btn :to="`${pathForm}`" class="ml-2 text-white button" max-width="40%" size="small" variant="flat" color="#00AAA2">
+          <v-btn :to="`${pathForm}`" class="ml-2 text-white button" max-width="40%" size="small" variant="flat"
+            color="#00AAA2">
             Go to forms </v-btn>
         </span>
         <v-icon class="icon" style="color: red;" size="25" @click="deleteRapport(_id)">mdi-delete</v-icon>
@@ -16,6 +18,7 @@
     </div>
   </main>
 </template>
+
 <script>
 import axios from 'axios'
 
@@ -30,15 +33,16 @@ export default {
 
   methods: {
     getData() {
-      fetch('https://kind-tan-goshawk-tux.cyclic.app/scheduled')
+      let sortedDatum
+      fetch('https://kind-tan-goshawk-tux.cyclic.app/scheduled?_sort=Datum&order=desc')
         .then((res) => res.json())
-        .then(data => this.toDo = data)
+        .then((data) => this.toDo = data.sort((d1, d2) => (d1.Datum < d2.Datum) ? 1 : (d1.Datum > d2.Datum) ? -1 : 0))
         .catch(err => console.log(err.message))
     },
 
     deleteRapport(id) {
       axios.delete('https://kind-tan-goshawk-tux.cyclic.app/scheduled' + id)
-        .then(() => { this.toDo.splice(id, 1)})
+        .then(() => { this.toDo.splice(id, 1) })
         .then(() => {
           this.$router.push({ name: 'Completed' })
         })
@@ -88,10 +92,10 @@ main {
   align-self: center;
 }
 
-.button{
-padding: 0 80px;
-margin-top: 10px;
-margin-left: 0px!important;
+.button {
+  padding: 0 80px;
+  margin-top: 10px;
+  margin-left: 0px !important;
 }
 
 

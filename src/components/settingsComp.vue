@@ -54,12 +54,12 @@
 
 
 export default {
-    name: 'addMaintenance',
+    name: 'settingsComp',
     data() {
         return {
             drawer: false,
             isDarkmode: false,
-            checkbox1: true,
+            checkbox1: false,
             checkbox2: false,
         }
     },
@@ -69,15 +69,10 @@ export default {
             document.documentElement.className = dark
             localStorage.setItem('theme', dark)
         },
-
-
-
     },
-
-
-
 }
 </script>
+
 <style scoped>
 .settings {
     font-family: 'Agency FB', sans-serif;

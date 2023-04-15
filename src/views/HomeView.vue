@@ -26,7 +26,7 @@
           <h3><span>KnowledgeBase</span></h3>
         </div>
       </v-btn>
-      <settingsComp />
+      <settingsComp/>
     </div>
    
     <v-divider class="divider" />
@@ -35,12 +35,11 @@
 </template>
 
 <script>
-import settingsComp from '@/components/settingsComp.vue'
-
+import settingsComp from '@/components/settingsComp.vue';
 export default {
   name: 'Home',
   components: {
-    settingsComp,
+    settingsComp
   },
 
   mounted() {
