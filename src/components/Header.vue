@@ -3,11 +3,11 @@
     <div class="content">
       <img :src="require('@/assets/logoRealEstateCare.svg')" alt="logo" />
       <v-btn class="ml-2 text-black" variant="flat" color="#fff">
-        log-out
+        log out
         <v-dialog v-model="dialog" activator="parent" max-width="500">
           <v-card>
             <v-card-text class="text-center">
-              Are you sure you want to log-out
+              Are you sure you want to log out
             </v-card-text>
             <v-card-actions class="d-flex justify-center">
               <v-btn class="ml-2 text-white" size="small" variant="flat" color="#1B1F32" v-on:click="logout">Yes</v-btn>

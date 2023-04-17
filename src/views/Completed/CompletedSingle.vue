@@ -447,7 +447,6 @@ export default {
 </script>
   
 <style scoped>
-
 .container {
     width: 100%;
     max-width: 1000px;
@@ -530,6 +529,17 @@ span {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        padding-bottom: 10px;
+        min-height: 82vh;
+    }
+
     h1.title {
 
         margin-top: 20px;
