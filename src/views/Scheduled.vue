@@ -140,6 +140,7 @@ h1.loading{
 
 main {
   min-height: 82vh;
+  padding-bottom: 10vh;
 }
 }
 
