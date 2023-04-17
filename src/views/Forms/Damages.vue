@@ -21,5 +21,14 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 86vh;
+    padding-bottom: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+
+main {
+  min-height: 82vh;
+  padding-bottom: 10vh;
+}
 }
 </style>

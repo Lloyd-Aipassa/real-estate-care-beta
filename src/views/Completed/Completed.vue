@@ -52,6 +52,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    padding-bottom: 10vh;
     min-height: 86vh;
 }
 
@@ -113,6 +114,7 @@ h1.loading {
 
     main {
         min-height: 82vh;
+        padding-bottom: 10vh;
     }
 
     .card {
@@ -120,4 +122,5 @@ h1.loading {
 
 
     }
-}</style>
+}
+</style>
