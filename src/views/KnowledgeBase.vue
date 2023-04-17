@@ -312,6 +312,8 @@ main {
     margin: 150px auto;
 }
 
+
+
 @media only screen and (max-width: 600px) {
 
     .kb-knop {
@@ -319,12 +321,19 @@ main {
         display: flex;
         flex-direction: column;
 
-        gap: 10px;
+        gap: 0px;
     }
 
-    .knop a {
-        margin-right: 0px;
-    }
+    a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color: #00AAA2;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 5px;
+    width: 100%;
+}
 
     .theme2 {
         margin-bottom: 3px;
