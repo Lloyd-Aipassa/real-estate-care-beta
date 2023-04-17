@@ -1,7 +1,7 @@
 <template >
   <main class="theme">
     <h1 class="title" style="text-align:center">Scheduled inspections</h1>
-    <v-divider class="mb-5"></v-divider>
+    <!-- <v-divider class="mb-5"></v-divider> -->
     <div v-for="{ _id, Locatie, Datum, Adress, typeOfInspection, pathForm } in toDo" :key="_id" class="post theme2">
       <div class="content">
         <span>
@@ -82,7 +82,6 @@ main {
   align-items: center;
   justify-content: space-between !important;
   padding: 10px;
-
 }
 
 .post {
@@ -92,7 +91,8 @@ main {
   min-height: 150px;
   margin: 10px 0;
   padding: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 5px;
   max-width: 600px;
 }
 
