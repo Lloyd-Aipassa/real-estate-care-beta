@@ -48,6 +48,7 @@ export default {
 
 body{
   background-color: #F0F0F1;
+  padding-bottom: 60px;
 }
 
 .knop{
