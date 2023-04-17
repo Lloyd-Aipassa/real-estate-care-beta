@@ -136,5 +136,12 @@ h1.loading{
   100% {transform: rotate(360deg);}
 }
 
+@media only screen and (max-width: 600px) {
+
+main {
+  min-height: 82vh;
+}
+}
+
 
 </style>
