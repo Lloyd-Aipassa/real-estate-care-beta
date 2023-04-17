@@ -91,6 +91,7 @@ main {
 
 @media only screen and (max-width: 600px) {
   main {
+    height: 82vh;
     padding: 20px;
     gap: 10px;
   }
