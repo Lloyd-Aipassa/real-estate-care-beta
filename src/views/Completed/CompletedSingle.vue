@@ -150,7 +150,7 @@
                             <v-dialog v-model="dialog" class="dialog">
                                 <template v-slot:activator="{ props }">
                                     <v-btn color="#1E292f" v-bind="props" class="knop">
-                                        Update Maintenance report
+                                        Fill out / Update form
                                     </v-btn>
                                 </template>
 
@@ -199,14 +199,12 @@
                             <v-divider></v-divider>
                             <h1> Comments:&nbsp;&nbsp;<span>{{ Schade.Comments }}</span></h1>
                             <v-divider></v-divider>
-                            <!-- <h1> Approved:&nbsp;&nbsp;<span>{{ Schade.CostOfMaintenance }}</span></h1>
-                            <v-divider></v-divider> -->
                         </div>
                         <div class="text-center">
                             <v-dialog v-model="dialog2" class="dialog">
                                 <template v-slot:activator="{ props }">
                                     <v-btn color="#1E292f" v-bind="props" class="knop">
-                                        Update Technical report
+                                        Fill out / Update form
                                     </v-btn>
                                 </template>
 
@@ -266,7 +264,7 @@
                             <v-dialog v-model="dialog3" class="dialog">
                                 <template v-slot:activator="{ props }">
                                     <v-btn color="#1E292f" v-bind="props" class="knop">
-                                        Update Modifications report
+                                        Fill out / Update form
                                     </v-btn>
                                 </template>
 
