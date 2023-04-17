@@ -94,6 +94,7 @@ main {
   main {
     height: 82svh;
     padding: 20px;
+    padding-bottom: 9vh;
     gap: 10px;
   }
 
