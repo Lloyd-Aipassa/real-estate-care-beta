@@ -86,15 +86,14 @@ main {
 .divider {
   width: 100%;
   max-width: 1300px;
-  margin: 20px auto;
-  
+  margin: 20px auto;  
 }
 
 @media only screen and (max-width: 600px) {
   main {
     height: 82svh;
     padding: 20px;
-    padding-bottom: 9vh;
+    padding-bottom: 90vh;
     gap: 10px;
   }
 

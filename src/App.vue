@@ -136,6 +136,10 @@ label {
   color: #7a7a7ab0;
 }
 
+.v-application__wrap {
+    min-height: 0vh !important;
+  }
+
 @media screen and (max-width: 600px) {
 
   input[type=button],
