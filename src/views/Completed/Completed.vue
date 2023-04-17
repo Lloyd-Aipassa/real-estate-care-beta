@@ -2,7 +2,6 @@
     <main class="theme">
         <h1 class="title1" style="text-align:center">Completed inspections</h1>
         <v-divider class="mb-5"></v-divider>
-
         <div v-for="schade in allSchades" :key="schade._id" class="card">
             <div class="content theme2">
                 <router-link :to="{ name: 'CompletedSingle', params: { id: schade._id } }">
@@ -10,11 +9,13 @@
                     <v-icon style="color: #00AAA2;" size="25">mdi-checkbox-marked-circle</v-icon>
                 </router-link>
             </div>
-
-
             <v-icon style="color: red;" size="25" @click="deleteRapport(schade._id)">mdi-delete</v-icon>
-
-
+        </div>
+        <div v-show="allSchades.length == 0">
+            <h1 class="loading">
+                <img :src="require('@/assets/spinner.svg')" class="spin" width="50" height="50" alt="logo" />
+                loading...
+            </h1>
         </div>
     </main>
 </template>
@@ -89,6 +90,21 @@ main {
     margin: 10px auto;
     text-transform: uppercase;
     font-size: 20px;
+}
+h1.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+}
+
+.spin {
+  animation: spinnerAnimatie 3s infinite;
+}
+
+@keyframes spinnerAnimatie {
+  100% {transform: rotate(360deg);}
 }
 
 @media screen and (max-width: 600px) {

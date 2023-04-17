@@ -14,8 +14,13 @@
         </span>
         <v-icon class="icon" style="color: red;" size="25" @click="deleteRapport(_id)">mdi-delete</v-icon>
       </div>
-
     </div>
+    <div v-if="loading">
+    <h1  class="loading">
+      <img :src="require('@/assets/spinner.svg')" class="spin" width="50" height="50" alt="logo" />
+        loading...
+    </h1>
+  </div>
   </main>
 </template>
 
@@ -27,20 +32,23 @@ export default {
 
   data() {
     return {
+      loading: "",
       toDo: [],
     }
   },
 
   methods: {
     getData() {
-      let sortedDatum
+      this.loading = true
       fetch('https://kind-tan-goshawk-tux.cyclic.app/scheduled?_sort=Datum&order=desc')
-        .then((res) => res.json())
+        .then((res) => res.json() 
+        .then(this.loading = false))
         .then((data) => this.toDo = data.sort((d1, d2) => (d1.Datum < d2.Datum) ? 1 : (d1.Datum > d2.Datum) ? -1 : 0))
         .catch(err => console.log(err.message))
     },
 
     deleteRapport(id) {
+     
       axios.delete('https://kind-tan-goshawk-tux.cyclic.app/scheduled' + id)
         .then(() => { this.toDo.splice(id, 1) })
         .then(() => {
@@ -110,4 +118,23 @@ main {
   text-transform: uppercase;
   font-size: 20px;
 }
+
+
+h1.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+}
+
+.spin {
+  animation: spinnerAnimatie 3s infinite;
+}
+
+@keyframes spinnerAnimatie {
+  100% {transform: rotate(360deg);}
+}
+
+
 </style>
