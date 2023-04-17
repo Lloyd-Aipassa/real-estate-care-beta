@@ -500,7 +500,7 @@ span {
     /* align-items: center; */
     justify-content: center;
     padding-bottom: 10px;
-    min-height: 10vh;
+    min-height: 86vh;
 }
 
 .main-card {

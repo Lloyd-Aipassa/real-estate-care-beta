@@ -273,9 +273,7 @@
     gap: 10px;
 }
 
-.knop a {
-    margin-right: 20px;
-}
+
 
 .theme2 {
     margin-bottom: 3px;
@@ -292,8 +290,9 @@ a {
 }
 
 main {
-    padding: 0 20px;
+    padding-bottom: 0 20px;
     min-height: 86vh;
+    margin-bottom: -200px;
 }
 
 .title {
@@ -304,7 +303,7 @@ main {
     height: 60px;
     width: 100%;
     display: flex;
-
+    margin-bottom:85px;
 }
 
 .logo img {
@@ -336,9 +335,7 @@ main {
 }
 
     .theme2 {
-        margin-bottom: 3px;
+        padding-bottom: 3px;
     }
-
-
 }
 </style>
