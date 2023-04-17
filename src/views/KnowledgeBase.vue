@@ -38,20 +38,29 @@
                         morbi tempus iaculis urna id volutpat lacus. Nunc sed augue lacus viverra. Pretium quam
                         vulputate
                         dignissim suspendisse. Mi sit amet mauris commodo quis imperdiet. Tempus urna et pharetra
-                        pharetra.</p>
-
-                    <div class="knop theme2">
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
-                            procedure maintenance</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
-                            procedure maintenance2</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-3.pdf">Test
-                            procedure maintenance3</a>
+                        pharetra.
+                    <div class="kb-knop">
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
+                                procedure maintenance</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
+                                procedure maintenance2</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-3.pdf">Test
+                                procedure maintenance3</a>
+                        </button><br>
                     </div>
+                    </p>
+
+
                 </v-expansion-panel-text>
+
             </v-expansion-panel>
 
 
@@ -102,15 +111,21 @@
                         dignissim suspendisse. Mi sit amet mauris commodo quis imperdiet. Tempus urna et pharetra
                         pharetra.</p>
 
-                    <div class="knop theme2">
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
-                            procedure Modifications1</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
-                            procedure Modifications2</a>
+                    <div class="kb-knop">
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
+                                procedure Modifications1</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
+                                procedure Modifications2</a>
+                        </button><br>
 
                     </div>
+
+
                 </v-expansion-panel-text>
             </v-expansion-panel>
 
@@ -137,17 +152,24 @@
                         in
                         iaculis. Sit amet consectetur adipiscing elit. Vel turpis nunc eget lorem dolor.</p><br>
 
-                    <div class="knop theme2">
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
-                            procedure Damage specification1</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
-                            procedure Damages specification2</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-3.pdf">Test
-                            procedure Damages specification3</a>
+                    <div class="kb-knop">
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
+                                procedure Damage specification1</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-2-1.pdf">Test
+                                procedure Damages specification2</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-3.pdf">Test
+                                procedure Damages specification3</a>
+                        </button><br>
                     </div>
+
                 </v-expansion-panel-text>
             </v-expansion-panel>
 
@@ -222,19 +244,22 @@
                         pharetra.</p>
                     pharetra.</p>
 
-                    <div class="knop theme2">
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
-                            procedure Technical1</a>
-                        <a target="_blank" download
-                            href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Case-RealEstateCare-10.pdf">Technical</a>
+                    <div class="kb-knop">
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Test-Procedure-1.pdf">Test
+                                procedure Technical1</a>
+                        </button><br>
+                        <button>
+                            <a target="_blank" download
+                                href="https://brooklynwebdesign.nl/wp-content/uploads/2022/11/Case-RealEstateCare-10.pdf">Technical</a>
+                        </button><br>
                     </div>
                 </v-expansion-panel-text>
             </v-expansion-panel>
         </v-expansion-panels>
         <div class="logo"> <img :src="require('@/assets/logogrey.svg')" /></div>
     </main>
-   
 </template>
 
 <script>
@@ -242,10 +267,10 @@
 </script>
 
 <style scoped>
-.knop {
-    height: 100px;
-    display: block;
-    margin-top: 70px
+.kb-knop {
+    display: flex;
+    margin: 50px 0;
+    gap: 10px;
 }
 
 .knop a {
@@ -260,12 +285,10 @@ a {
     text-decoration: none;
     color: white;
     background-color: #00AAA2;
-    height: 100%;
     text-align: center;
     padding: 20px 80px;
     border-radius: 8px;
     width: 550px;
-    /* margin: 220px auto; */
 }
 
 main {
@@ -287,5 +310,26 @@ main {
 .logo img {
     height: 100%;
     margin: 150px auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .kb-knop {
+ 
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .knop a {
+        margin-right: 0px;
+    }
+
+    .theme2 {
+        margin-bottom: 3px;
+    }
+
+
 }
 </style>
