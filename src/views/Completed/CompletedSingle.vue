@@ -11,7 +11,7 @@
                 @click="model = Math.min(model + 1, 4)">next</v-btn>
         </div>
         <div class="container">
-            <v-carousel hide-delimiters :show-arrows="false" height="100%" v-model="model">
+            <v-carousel hide-delimiters :show-arrows="false" height="100%" v-model="model" class="carousel">
                 <v-snackbar location="top" color="#00AAA2" v-model="snackbar">
                     {{ text }}
                     <template v-slot:actions>
@@ -221,7 +221,8 @@
                                             <v-text-field label="Reported malfunction" required
                                                 v-model="Schade.ReportedMalfunction" bg-color="#f0f0f100">
                                             </v-text-field>
-                                            <v-checkbox v-model="Schade.Aproved" label="Aproved" true-value="yes" false-value="no">
+                                            <v-checkbox v-model="Schade.Aproved" label="Aproved" true-value="yes"
+                                                false-value="no">
                                             </v-checkbox>
                                             <v-text-field label="Comments" required v-model="Schade.Comments"
                                                 bg-color="#f0f0f100">
@@ -446,13 +447,13 @@ export default {
 </script>
   
 <style scoped>
+
 .container {
     width: 100%;
     max-width: 1000px;
-    min-height: 86vh;
     margin: auto;
     display: flex;
-
+    padding-bottom: 10vh;
 }
 
 h1.titel {
@@ -502,6 +503,7 @@ span {
     /* align-items: center; */
     justify-content: center;
     padding-bottom: 10px;
+    min-height: 10vh;
 }
 
 .main-card {

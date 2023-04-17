@@ -73,6 +73,7 @@ main {
   flex-direction: column;
   align-items: center;
   min-height: 86vh;
+  padding-bottom: 10vh;
 }
 
 .content {
