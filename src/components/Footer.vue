@@ -57,9 +57,9 @@ footer {
   align-items: center;
   justify-content: center;
   column-gap: 50px;
-  /* position: sticky;
+  position: sticky;
   left: 0;
-  bottom: 0; */
+  bottom: 0;
   z-index: 10;
 }
 
